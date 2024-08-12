@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "kaisen";
+  src: url(../fontes/Jujutsu\ Kaisen.ttf);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.carrosel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.informacoes {
+  display: none;
+}
+
+.informacoes.ativa {
+  display: block;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.informacoes h1 {
+  font-size: 45px;
+  /* color: rgb(255, 255, 255); */
+  margin-bottom: 80px;
+  font-family: "kaisen";
+  letter-spacing: 4px;
+  font-weight: 2;
+   
+  background: linear-gradient(to bottom, #3F181B, #6E1B20, #A21F26);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+
+  -webkit-text-stroke: 1.8px black;
+}
+
+.informacoes .descricao {
+  width: 49%;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  line-height: 40px;
+  height: 300px;
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.botoes-carrosel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botoes-carrosel .botao {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-color: white;
+}
+
+.botoes-carrosel .botao.selecionado {
+  background-color: #40a3ca;
+}
+
+.img{
+  object-fit: cover;
+  display: none;
+}
+
+.img.ativa {
+  display: block;
+  animation: mudarImagem 0.7s;
+}
+
+@keyframes mudarImagem {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main:after {
+  content: "";
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.05926120448179273) 50%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  z-index: -1;
+}
