@@ -21,6 +21,7 @@ body {
 
 .informacoes.ativa {
   display: block;
+  animation: descerInformacoes 2s ease-in-out forwards;
 }
 
 .conteudo {
@@ -52,7 +53,7 @@ body {
   color: rgb(255, 255, 255);
   line-height: 40px;
   height: 300px;
-  overflow: auto;
+  overflow: visible;
   padding-right: 15px;
 }
 
@@ -94,6 +95,17 @@ body {
     opacity: 1;
   }
 }
+
+
+@keyframes descerInformacoes {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 
 main:after {
   content: "";
