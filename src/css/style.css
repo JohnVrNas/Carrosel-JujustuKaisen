@@ -99,7 +99,7 @@ body {
 
 @keyframes descerInformacoes {
   from {
-    transform: translateY(-5%);
+    transform: translateY(-1%);
   }
   to {
     transform: translateY(0);
